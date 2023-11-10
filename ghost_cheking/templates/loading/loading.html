@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<link rel="stylesheet" href="{% static 'css/loading.css' %}">
+<html lang="ru" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+</head>
+<body>
+<div class="wrapper">
+    <header><a href="/" style="color: black;  text-decoration: none;">Ghost-Checking</a></header>
+    <main>
+        <div class="Group_3">
+          <progress value="30" max="100" id="bar"></progress>
+          <p class="font_check" id="info"></p>
+        </div>
+    </main>
+    <footer>
+        <div class="powered_by"><p>powered by ytrewq</p></div>
+        <div class="imgs">
+            <div class="img_tg"><img src="{% static 'img/icon _tg.png' %}"></div>
+            <div class="img_whatapp"><img src="{% static 'img/icon _whatsapp.png' %}"></div>
+            <div class="img_instagram"><img src="{% static 'img/icon _instagram.png' %}"></div>
+            <div class="img_facebook"><img src="{% static 'img/icon _facebook.png' %}"></div>
+        </div>
+    </footer>
+</div>
+<script>
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+  const arr = ['обзацный отступ', 'шрифт', 'размер шрифтa', 'цвет шрифта', 'размер левого поля', 'размер правого поля'];
+  const bar = document.getElementById("bar");
+  const info = document.getElementById("info");
+  async function demo() {
+  let a = 0;
+  for (let i = 0; i < 6; i++) {
+    a = a + 100 / 6
+    console.log(arr[i]);
+    bar.value = a;
+    info.innerText = "Проверяем " + arr[i];
+    await sleep(1000);
+   }
+   window.location.replace("{{ link }}");
+  }
+    demo();
+</script>
+</body>
+</html>

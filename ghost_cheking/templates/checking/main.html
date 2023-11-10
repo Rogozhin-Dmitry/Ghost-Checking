@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <title>Проверка гостов</title>
 </head>
 <body>
-    <form action="{% url 'checking:upload_file' %}" method="post">
+    <form action="{% url 'checking:upload_file' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">

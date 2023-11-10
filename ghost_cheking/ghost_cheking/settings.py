@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'checking.apps.CheckingConfig',
+    'intro_page.apps.IntroPageConfig',
+    'results.apps.ResultsConfig',
+    'loading.apps.LoadingConfig'
 ]
 
 MIDDLEWARE = [

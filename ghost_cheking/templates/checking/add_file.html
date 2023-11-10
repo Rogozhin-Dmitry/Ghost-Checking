@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+<link rel="stylesheet" href="{% static 'css/add_file.css' %}">
+<html lang="ru" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+</head>
+<body>
+<div class="wrapper">
+    <header><a href="/" style="color: black;  text-decoration: none;">Ghost-Checking</a></header>
+    <main>
+        <form action="{% url 'checking:upload_file' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="Group_3">
+            <div class="l_div">
+              <div class="l_first"><img src="{% static 'img/icon _document upload.png' %}"></div>
+              <div class="l_second"><p>Перенесите файл или</p></div>
+
+              <div class="l_third">
+                  <label class="input-file">
+                    {{ form.file }}
+<!--                <button style="width: 263px; height: 61px; -->
+<!--                background-color: #1265B1; border-color: #1265B1;-->
+<!--                 color: white;font-size: 35px;-->
+<!--                 border-radius: 30px;">-->
+<!--                Выбрать</button>-->
+                      <span>Выбрать</span>
+                  </label>
+              </div>
+
+            </div>
+            <div class="line"></div>
+            <div class="r_div">
+              <div class="r_first"><img style="float: left;height: 50%;" src="{% static 'img/Ellipse 3.png' %}"><p>Document.pdf</p></div>
+              <div class="r_second"><img style="float: left; height: 50%;" src="{% static 'img/Ellipse 3.png' %}"><p></p>Document.docx</div>
+             <input type="submit" value="Отправить" style="margin-top: 178px; width: 263px; height: 61px;
+                background-color: #1265B1; border-color: #1265B1;
+                 color: white;font-size: 35px;
+                 border-radius: 30px;">
+            </div>
+        </div>
+        </form>
+    </main>
+    <footer>
+        <div class="powered_by"><p>powered by ytrewq</p></div>
+        <div class="imgs">
+            <div class="img_tg"><img src="{% static 'img/icon _tg.png' %}"></div>
+            <div class="img_whatapp"><img src="{% static 'img/icon _whatsapp.png' %}"></div>
+            <div class="img_instagram"><img src="{% static 'img/icon _instagram.png' %}"></div>
+            <div class="img_facebook"><img src="{% static 'img/icon _facebook.png' %}"></div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>>

@@ -8,11 +8,16 @@ from django.urls import path, include
 
 import checking.urls
 import intro_page.urls
+import results.urls
+import loading.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(intro_page.urls)),
-    path('check/', include(checking.urls))
+    path('check/', include(checking.urls)),
+    path('result/', include(results.urls)),
+    path('load/', include(loading.urls))
+
 ]
 
 if django.conf.settings.DEBUG:

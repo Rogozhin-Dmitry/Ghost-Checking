@@ -1,28 +1,29 @@
 import django.shortcuts
-from django import forms
 from django.views.generic import TemplateView
 
+from .forms import UploadFileForm, handle_uploaded_file
 
-def upload_file(request):
-    return django.shortcuts.render(request, 'checking/main.html')
-
-
-class UploadForm(forms.Form):
-    your_name = forms.CharField(label="Your name", max_length=100)
+a = False
 
 
 class UploadFile(TemplateView):
-    TEMPLATE = "checking/main.html"
+    TEMPLATE = "checking/add_file.html"
 
     def get(self, request, *args, **kwargs):
-        form = UploadForm(request.POST or None)
+        form = UploadFileForm()
         context = {'form': form}
         return django.shortcuts.render(request, self.TEMPLATE, context)
 
     def post(self, request):
-        form = UploadForm(request.POST or None)
-        if request.method == 'POST':
-            if form and form.is_valid():
-                print('lol, wtf')
-            #     return redirect('item_detail', item_num=context['item'].pk)
-            # return render(request, self.TEMPLATE, context)
+        global a
+        form = UploadFileForm(request.POST, request.FILES)
+        context = {'form': form}
+        if form and form.is_valid():
+            handle_uploaded_file(request.FILES["file"])
+            if a:
+                a = False
+                return django.shortcuts.redirect("loading:progres-bar", 1)
+            else:
+                a = True
+                return django.shortcuts.redirect("loading:progres-bar", 0)
+        return django.shortcuts.render(request, self.TEMPLATE, context)

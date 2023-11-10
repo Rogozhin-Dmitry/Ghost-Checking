@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<link rel="stylesheet" href="{% static 'css/errors.css' %}">
+<html lang="ru" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+</head>
+<body>
+<div class="wrapper">
+    <header><a href="/" style="color: black;  text-decoration: none;">Ghost-Checking</a></header>
+    <main>
+        <div class="Group_3">
+            <p class="q_pravok">Количество правок - 3</p>
+            <table>
+                <tbody>
+                <tr>
+                    <td class="td_left">Страница 1</td>
+                    <td class="td_right">Обзацный отступ больше допустимого</td>
+                </tr>
+                <tr>
+                    <td class="td_left">Страница 1</td>
+                    <td class="td_right">Недопустиный шрифт</td>
+                </tr>
+                <tr>
+                    <td class="td_left">Страница 1</td>
+                    <td class="td_right">Размер шрифта меньше допустимого</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="powered_by"><p>powered by ytrewq</p></div>
+        <div class="imgs">
+            <div class="img_tg"><img src="{% static 'img/icon _tg.png' %}"></div>
+            <div class="img_whatapp"><img src="{% static 'img/icon _whatsapp.png' %}"></div>
+            <div class="img_instagram"><img src="{% static 'img/icon _instagram.png' %}"></div>
+            <div class="img_facebook"><img src="{% static 'img/icon _facebook.png' %}"></div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

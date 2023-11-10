@@ -1,8 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -18,7 +19,7 @@
         <div class="hero-content">
           <h1>Проверка документа на  <span>  соответствие ГОСТу </span></h1>
           <div class="hero-content__p"></div>
-          <a href="{% url 'checking:upload_file' %}" class="button-start">Начать</a>
+          <a href="{% url 'checking:upload_file' %}" class="button-start" style="text-decoration: none">Начать</a>
         </div>
     </div>
     <div class="layers__item layer-4" style="background-image: url({% static 'img/layer-front.png' %});"></div>
