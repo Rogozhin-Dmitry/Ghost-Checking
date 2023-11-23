@@ -1,0 +1,103 @@
+body {
+  padding: 0;
+	margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Group_3{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+}
+
+#upload-container {
+  margin-top: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 400px;
+	height: 400px;
+	outline: 2px dashed #5d5d5d;
+	outline-offset: -12px;
+	background-color: #e0f2f7;
+	font-family: 'Segoe UI';
+	color: #1f3c44;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+}
+
+#upload-container img {
+	width: 40%;
+	margin-bottom: 20px;
+	user-select: none;
+}
+
+#upload-container label {
+	font-weight: bold;
+}
+
+#upload-container label:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#upload-container div {
+	position: relative;
+	z-index: 10;
+}
+
+#upload-container input[type=file] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	position: absolute;
+	z-index: -10;
+}
+
+#upload-container label.focus {
+	outline: 1px solid #0078d7;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+#upload-container.dragover {
+	background-color: #fafafa;
+	outline-offset: -17px;
+}
+
+.under-input{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 7%;
+	background-color: #e0f2f7;
+}
+
+.button-container{
+	width: 50%;
+	margin-left: auto;
+	
+}
+.button-start{
+  font-family: Arial;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.01vw;
+  background-color: transparent;
+  color: rgb(97, 94, 94);
+  border-radius: 0.5em;
+  border: #5d5d5d 2px solid;
+  border-color: #5d5d5d;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.7vw;
+  text-decoration: none;
+	padding: 0.1%;
+}

@@ -1,0 +1,47 @@
+main {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+}
+
+.Group_3{
+  background-color: black;
+  width: 1300px;
+  height: 461px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 74px;
+  background: #D9D9D9; 
+  color: #fff; 
+  padding: 10px; 
+  border-radius: 6px; 
+}
+.q_pravok{
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 30px;
+  color: black;
+}
+table,
+td {
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  color: black;
+  height: 10%;
+
+}
+.td_left{
+  width: 9%;
+}
+.td_right{
+  width: 9%;
+}
+
+tfoot {
+  background-color: #333;
+  color: #fff;
+}

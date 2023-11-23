@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+	margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 35%;
+  height: 20%;
+  font-size: 4vw;
+  background: #e0f2f7;
+}
+
+.ok-text{
+  text-align: center;
+}
