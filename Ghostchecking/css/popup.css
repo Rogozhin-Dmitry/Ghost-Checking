@@ -1,0 +1,19 @@
+.tooltip-wrap {
+  position: relative;
+  background-color: aquamarine;
+}
+.tooltip-wrap .tooltip-content {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  background-color: #fff;
+  padding: .5em;
+  min-width: 10rem;
+  background-color:blueviolet;
+  color: blanchedalmond;
+}
+.tooltip-wrap:hover .tooltip-content {
+  display: block;
+}

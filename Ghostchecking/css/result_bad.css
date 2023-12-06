@@ -1,47 +1,69 @@
 main {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 85%;
 }
 
 body {
+  min-height: 75%;
+  padding: 0;
   margin: 0;
+  position: relative;
+  /* overflow:scroll; */
 }
+
+/* .wrapper{
+  height: auto;
+  min-height: 85vh;
+} */
 
 .Group_3{
   background-color: black;
   width: 1300px;
-  height: 461px;
+  height: min-content;
   margin-left: auto;
   margin-right: auto;
   margin-top: 74px;
-  background: #D9D9D9; 
-  color: #fff; 
+  background: #e0f2f7; 
   padding: 10px; 
   border-radius: 6px; 
+
+  
 }
 .q_pravok{
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 0;
+  margin-bottom: 0; 
   font-size: 30px;
   color: black;
 }
 table,
 td {
   font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
   border: 1px solid black;
   color: black;
-  height: 10%;
-
 }
 .td_left{
-  width: 9%;
+  width: 5%;
 }
 .td_right{
-  width: 9%;
+  width: 5%;
 }
 
 tfoot {
   background-color: #333;
   color: #fff;
+}
+
+.tooltip-wrap .tooltip-content {
+  display: none;
+  position: absolute;
+  background-color: #ADF4EC;
+  margin-top: -13vh  ;
+  padding: .5em;
+  min-width: 10rem;
+}
+.tooltip-wrap:hover .tooltip-content {
+  display: block;
 }
