@@ -1,10 +1,4 @@
 html, body {margin: 0; height: 100%; overflow: hidden}
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
 
 header{
   font-size: 44px;
@@ -16,8 +10,6 @@ footer {
   background-color: #e0f2f7;
   color:black;
   font-size: 24px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .wrapper {
@@ -35,27 +27,30 @@ main {
 }
 
 .powered_by{
-  margin: 0 30px;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
+  width: 75%;
+  float: left;
+  
 }
-
 .imgs{
+  width: 25%;
+  height: 100%;
+  margin-left: auto;
+  margin-top: 0.4%;
   float: right;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
 }
-
-img {
-    width: 50px;
-    height: 50px;
-    margin: 7px;
+.img_tg{
+  width: 25%;
+  float: left;
 }
-
-.logo {
- color: black;
- text-decoration: none;
- margin: 5px 15px;
+.img_whatapp{
+  width: 25%;
+  float: left;
+}
+.img_instagram{
+  width: 25%;
+  float: right;
+}
+.img_facebook{
+  width: 25%;
+  float: right;
 }
