@@ -3,7 +3,8 @@ main {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  min-height: 85%;
+  min-height: 85vh;
+  height: auto;
 }
 
 body {
@@ -11,13 +12,13 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  /* overflow:scroll; */
+  overflow:scroll;
 }
 
-/* .wrapper{
+.wrapper{
   height: auto;
-  min-height: 85vh;
-} */
+  min-height: 100vh;
+}
 
 .Group_3{
   background-color: black;
@@ -63,6 +64,7 @@ tfoot {
   margin-top: -13vh  ;
   padding: .5em;
   min-width: 10rem;
+  max-width: 38rem;
   border-radius: 10px;
 }
 .tooltip-wrap:hover .tooltip-content {
